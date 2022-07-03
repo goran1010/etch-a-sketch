@@ -37,8 +37,8 @@ function startGame() {
   }
   const rowsBox = Array.from(document.querySelectorAll(`.row`));
   for (let i = 0; i < rowNumber * columnNumber; i++) {
-    rowsBox[i].addEventListener(`mouseenter`, () =>
-      rowsBox[i].classList.add("active")
+    rowsBox[i].addEventListener(`mouseenter`, (e) =>
+      e.target.classList.add("active")
     );
   }
 }
